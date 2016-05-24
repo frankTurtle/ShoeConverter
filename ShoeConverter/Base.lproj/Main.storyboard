@@ -36,37 +36,52 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter US Shoe Size Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bnJ-23-CFF">
-                                <rect key="frame" x="20" y="258" width="172" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTy-6d-GiF">
+                                <rect key="frame" x="20" y="136" width="158" height="48"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTy-6d-GiF">
-                                <rect key="frame" x="20" y="134" width="46" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="convertButton"/>
+                                <connections>
+                                    <action selector="convertMensShoeSizePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d2D-QI-XYL"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhN-j9-qQK">
-                                <rect key="frame" x="20" y="303" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhN-j9-qQK">
+                                <rect key="frame" x="20" y="296" width="158" height="48"/>
                                 <animations/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="convertButton"/>
+                                <connections>
+                                    <action selector="convertWomensShoeSizePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BvH-2z-nud"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please enter men's shoe size as whole numbers. Women's shoe sizes may be entered as half sizes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Al-0M-sS2">
-                                <rect key="frame" x="20" y="335" width="312" height="73"/>
+                                <rect key="frame" x="20" y="352" width="312" height="73"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter US Shoe Size Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bnJ-23-CFF">
+                                <rect key="frame" x="20" y="241" width="172" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="mensConvertedShoeSizeLabel" destination="Lkh-m5-KV0" id="cf4-aF-XyA"/>
+                        <outlet property="mensShoeSizeTextField" destination="Tmd-4V-hqX" id="spj-y6-vGx"/>
+                        <outlet property="womensConvertedShoeSizeLabel" destination="Ca6-w5-bkd" id="UJK-3Z-dZd"/>
+                        <outlet property="womensShoeSizeTextField" destination="bnJ-23-CFF" id="0bx-X1-xmr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="339" y="343"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="convertButton" width="158" height="48"/>
+    </resources>
 </document>
